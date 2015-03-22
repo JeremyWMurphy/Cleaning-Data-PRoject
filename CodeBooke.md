@@ -2,15 +2,6 @@
 
 The original data are the Human Activity Recognition Using Smartphones Dataset Version 1.0 from:
 
-==================================================================
-Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
-Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova.
-Via Opera Pia 11A, I-16145, Genoa, Italy.
-activityrecognition@smartlab.ws
-www.smartlab.ws
-================================================================== 
-
 All data were downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. See the readme within this data set for a complete discription of the original data set.
 
 In short, the data are from an experiment carried out with a group of 30 volunteers. Each person perfomred six activities (walking, walking upstairs, walking downstairs, sitting, standing, laying) while wearing a smartphone (Samsung Galaxy S II) on the waist.
@@ -20,6 +11,8 @@ The data from the 30 participants were partitioned into a training set (70%) and
 The original raw data was acquired from two sensors, the accelerometer and the gyroscope. 
 
 # The run_analysis.R code
+
+This script uses the dplyr package, and loads it at the start.
 
 This code reads in the unzipped data, downloaded from the link above under the assumption that the unzipped folder is placed in the current working directory.
 
@@ -36,20 +29,32 @@ Note: these data were selected because they were the closest to the raw form. Ot
 The retained and renamed measurment variables are as follow in the script are as follows:
 
 1. Accelerometer variables (units: standard gravity units, 'g'):
- *Accel_Mean_X -- mean acceleration in the X direction
- *Accel_Mean_Y -- mean acceleration in the Y direction
- *Accel_Mean_Z -- mean acceleration in the Z direction
- *Accel_STD_X -- standard deviation of acceleration in the X  	direction
- *Accel_STD_Y -- standard deviation of acceleration in the Y  	direction
- *Accel_STD_Z -- standard deviation of acceleration in the Z  	direction
+  
+  *Accel_Mean_X -- mean acceleration in the X direction
+  
+  *Accel_Mean_Y -- mean acceleration in the Y direction
+  
+  *Accel_Mean_Z -- mean acceleration in the Z direction
+  
+  *Accel_STD_X -- standard deviation of acceleration in the X  	direction
+ 
+  *Accel_STD_Y -- standard deviation of acceleration in the Y  	direction
+ 
+  *Accel_STD_Z -- standard deviation of acceleration in the Z  	direction
 
 2. Gyroscope variable (units: angular velocity measured as radians/second):
- *Gyro_Mean_X -- mean angular velocity in the X direction
- *Gyro_Mean_Y -- mean angular velocity in the Y direction
- *Gyro_Mean_Z -- mean angular velocity in the Z direction
- *Gyro_STD_X -- standard deviation of angular velocity in the X  	direction
- *Gyro_STD_Y -- standard deviation of angular velocity in the Y  	direction
- *Gyro_STD_Z -- standard deviation of angular velocity in the Z  	direction
+ 
+  *Gyro_Mean_X -- mean angular velocity in the X direction
+ 
+  *Gyro_Mean_Y -- mean angular velocity in the Y direction
+ 
+  *Gyro_Mean_Z -- mean angular velocity in the Z direction
+ 
+  *Gyro_STD_X -- standard deviation of angular velocity in the X  	direction
+ 
+  *Gyro_STD_Y -- standard deviation of angular velocity in the Y  	direction
+ 
+  *Gyro_STD_Z -- standard deviation of angular velocity in the Z  	direction
 
 # Output data: tiny_data.txt
 
