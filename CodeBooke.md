@@ -30,41 +30,41 @@ The retained and renamed measurment variables are as follow in the script are as
 
 1. Accelerometer variables (units: standard gravity units, 'g'):
   
-  *Accel_Mean_X -- mean acceleration in the X direction
-  
-  *Accel_Mean_Y -- mean acceleration in the Y direction
-  
-  *Accel_Mean_Z -- mean acceleration in the Z direction
-  
-  *Accel_STD_X -- standard deviation of acceleration in the X  	direction
- 
-  *Accel_STD_Y -- standard deviation of acceleration in the Y  	direction
- 
-  *Accel_STD_Z -- standard deviation of acceleration in the Z  	direction
+  * Accel_Mean_X -- mean acceleration in the X direction
+  * Accel_Mean_Y -- mean acceleration in the Y direction
+  * Accel_Mean_Z -- mean acceleration in the Z direction
+  * Accel_STD_X -- standard deviation of acceleration in the X  	direction
+  * Accel_STD_Y -- standard deviation of acceleration in the Y  	direction
+  * Accel_STD_Z -- standard deviation of acceleration in the Z  	direction
 
 2. Gyroscope variable (units: angular velocity measured as radians/second):
  
-  *Gyro_Mean_X -- mean angular velocity in the X direction
- 
-  *Gyro_Mean_Y -- mean angular velocity in the Y direction
- 
-  *Gyro_Mean_Z -- mean angular velocity in the Z direction
- 
-  *Gyro_STD_X -- standard deviation of angular velocity in the X  	direction
- 
-  *Gyro_STD_Y -- standard deviation of angular velocity in the Y  	direction
- 
-  *Gyro_STD_Z -- standard deviation of angular velocity in the Z  	direction
+  * Gyro_Mean_X -- mean angular velocity in the X direction
+  * Gyro_Mean_Y -- mean angular velocity in the Y direction
+  * Gyro_Mean_Z -- mean angular velocity in the Z direction
+  * Gyro_STD_X -- standard deviation of angular velocity in the X  	direction
+  * Gyro_STD_Y -- standard deviation of angular velocity in the Y  	direction
+  * Gyro_STD_Z -- standard deviation of angular velocity in the Z  	direction
 
 # Output data: tiny_data.txt
 
 The data are written out by the script as a .txt document.
 
-It has 14 columns, the first two columns contain the factor variables participant ID ("Subj_ID") and activity. The reamaining 12 columns contain the above mentioned accelerometer and gyroscope numeric variables.
+It has 14 columns, the first two columns contain,
+  1. The factor variable participant ID ("Subj_ID"), levels  1-30. 
+  2. The factor variable activity (6 leves):
+    * walk -- walking
+    * walk_up -- walking upstairs
+    * walk_dwn -- walking downstairs
+    * sit -- sitting
+    * stand -- standing
+    * lay --lying down
+
+The reamaining 12 columns contain the above mentioned accelerometer and gyroscope numeric variables.
 
 The output can be read back into R using:
 
-read.table("tiny_data.txt", header = TRUE)
+`read.table("tiny_data.txt", header = TRUE)`
 
 
  
